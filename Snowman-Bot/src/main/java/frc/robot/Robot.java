@@ -12,6 +12,8 @@ import edu.wpi.first.wpilibj.motorcontrol.Talon;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import frc.robot.RobotContainer;
+
+import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 
 
@@ -95,9 +97,11 @@ public class Robot extends TimedRobot {
     double y = -controller.getLeftY();
     double left = x+y;
     double right = x-y;
-    leftMotor.set(left);
-    rightMotor.set(right);
-
+    leftMotor1.set(ControlMode.PercentOutput, left);
+    leftMotor2.set(ControlMode.PercentOutput, left);
+    rightMotor2.set(ControlMode.PercentOutput, right);
+    rightMotor2.set(ControlMode.PercentOutput, right);
+  
   }
 
   /** This function is called periodically during operator control. */
