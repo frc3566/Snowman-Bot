@@ -8,9 +8,11 @@ import java.time.Year;
 
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.XboxController;
+import edu.wpi.first.wpilibj.motorcontrol.Talon;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import frc.robot.RobotContainer;
+import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 
 
 /**
@@ -24,6 +26,7 @@ public class Robot extends TimedRobot {
 
   private RobotContainer m_robotContainer;
   private XboxController controller;
+  private TalonSRX leftMotor1 = 
 
   /**
    * This function is run when the robot is first started up and should be used for any
