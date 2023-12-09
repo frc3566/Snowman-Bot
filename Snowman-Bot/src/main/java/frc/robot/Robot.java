@@ -26,7 +26,10 @@ public class Robot extends TimedRobot {
 
   private RobotContainer m_robotContainer;
   private XboxController controller;
-  private TalonSRX leftMotor1 = 
+  private TalonSRX leftMotor1 = new TalonSRX(0);
+  private TalonSRX leftMotor2 = new TalonSRX(1);
+  private TalonSRX rightMotor1 = new TalonSRX(2);
+  private TalonSRX rightMotor2 = new TalonSRX(3);
 
   /**
    * This function is run when the robot is first started up and should be used for any
